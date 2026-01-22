@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <title>Kosár – Avon by Angéla</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Kosár</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="header">
+        <div class="logo"><span>Beauty</span> by Angéla</div>
+        <nav>
+            <a href="index.html">Főoldal</a>
+            <a href="products.html">Termékek</a>
+            <a href="cart.html">Kosár</a>
+        </nav>
+    </header>
 
-<header class="header">
-  <div class="logo"><span>Beauty</span> by Angéla</div>
-  <nav>
-    <a href="index.html">Főoldal</a>
-    <a href="products.html">Termékek</a>
-    <a href="cart.html">Kosár</a>
-  </nav>
-</header>
+    <div class="cart-container">
+        <h2>Kosár tartalma</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Termék</th>
+                    <th>Ár</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cart-items-body"></tbody>
+        </table>
+        <div style="text-align:right; font-weight:bold; font-size:1.2em; margin-bottom:20px;">
+            Végösszeg: <span id="cart-total">0</span> Ft
+        </div>
 
-<main class="cart-page">
-  <h1>Kosár</h1>
+        <h3>Szállítási adatok</h3>
+        <form id="orderForm">
+            <div class="form-group"><input type="text" id="nev" placeholder="Név" required></div>
+            <div class="form-group"><input type="email" id="email" placeholder="Email" required></div>
+            <div class="form-group"><input type="tel" id="telefon" placeholder="Telefonszám" required></div>
+            <div class="form-group"><input type="text" id="cim" placeholder="Szállítási cím" required></div>
+            <div class="form-group"><textarea id="megjegyzes" placeholder="Megjegyzés"></textarea></div>
+            <button type="submit" class="submit-btn">Rendelés elküldése</button>
+        </form>
+    </div>
 
-  <div class="cart-box">
-    <p>Termék neve – Termék ára</p>
-    <button class="remove">Eltávolítás</button>
-  </div>
-
-  <div class="cart-summary">
-    <strong>Összesen: Termék ára</strong>
-  </div>
-
-  <form class="order-form">
-    <h2>Rendelési adatok</h2>
-    <input type="text" placeholder="Teljes név">
-    <input type="text" placeholder="Telefonszám">
-    <input type="email" placeholder="Email cím">
-    <input type="text" placeholder="Szállítási cím">
-    <input type="text" placeholder="Megjegyzés (opcionális)">
-    <button>Megrendelés elküldése</button>
-  </form>
-</main>
-
-<footer class="footer">
-  © Noszály Angéla – Avon tanácsadó
-  <h5>weboldalon található vélemények, állítások, termékmegjelenítések kizárólag Noszály Angéla - Avon 
-    Tanácsadó által lértehozott tartalmak, amelyeket az AVON nem ellenőríz, illetve nem hagy jóvá. A weboldal
-    üzemeltetéséért kizárólag az AVON Tanácsadó felel és az nem tekinthető az AVON hivatalos weboldalának</h5>
-</footer>
-
+    <script src="js/script.js"></script>
 </body>
 </html>

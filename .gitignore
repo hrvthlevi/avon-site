@@ -1,0 +1,43 @@
+# --- Függőségek (A legfontosabb!) ---
+node_modules/
+package-lock.json
+
+# --- Adatbázis és Feltöltések ---
+# A képeket nem akarjuk feltölteni a GitHubra, mert sok helyet foglalnak
+uploads/
+# A products.json-t ÉRDEMES lehet feltölteni kezdetben, de ha azt akarod, 
+# hogy a lokális tesztadatok ne kerüljenek fel, akkor vedd ki a kommentet elöle:
+# data/products.json
+
+# --- Környezeti változók és titkok ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Log fájlok (hibakereséshez generált fájlok) ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs
+*.log
+npm-debug.log
+
+# --- Szerkesztő programok szemetei ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Operációs rendszer fájlok ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
