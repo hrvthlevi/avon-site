@@ -107,7 +107,7 @@ app.post('/api/order', async (req, res) => {
     const vegosszeg = kosar.reduce((sum, item) => sum + parseInt(item.ar), 0);
 
     let mailOptions = {
-        from: '"Avon Webshop" <leventehorvath0426@gmail.com>',
+        from: '"Beauty by Angéla" <leventehorvath0426@gmail.com>',
         to: 'leventehorvath0426@gmail.com',
         subject: `Új rendelés: ${nev}`,
         html: `
