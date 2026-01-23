@@ -1,68 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Admin</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        padding: 20px;
-        background: #f8f9fa;
-      }
-      .container {
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        max-width: 800px;
-      }
-    </style>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Termékkezelés</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>body{padding:20px;background:#f8f9fa;} .container{background:white;padding:30px;border-radius:10px;max-width:800px;}</style>
+</head>
+<body>
     <div class="container">
-      <h2 class="text-center mb-4">Termékfeltöltés</h2>
-      <form id="addProductForm">
-        <div class="mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="nev"
-            placeholder="Termék neve"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <input
-            type="number"
-            class="form-control"
-            id="ar"
-            placeholder="Ár (Ft)"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <input
-            type="file"
-            class="form-control"
-            id="kepFile"
-            accept="image/*"
-            required
-          />
-        </div>
-        <div class="mb-3">
-          <textarea
-            class="form-control"
-            id="leiras"
-            placeholder="Leírás"
-          ></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Feltöltés</button>
-      </form>
-      <hr />
-      <div id="adminProductList"></div>
+        <h2 class="text-center mb-4">Termékfeltöltés</h2>
+        
+        <form id="addProductForm">
+            <div class="mb-3">
+                <label class="form-label">Termék neve</label>
+                <input type="text" class="form-control" id="nev" required>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Ár (Ft)</label>
+                    <input type="number" class="form-control" id="ar" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Akciós Ár (Opcionális)</label>
+                    <input type="number" class="form-control" id="akciosAr" placeholder="Ha nincs, hagyd üresen">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Kép (Fájl)</label>
+                <input type="file" class="form-control" id="kepFile" accept="image/*" required>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Leírás</label>
+                <textarea class="form-control" id="leiras"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100">Feltöltés</button>
+        </form>
+        
+        <hr class="my-5">
+        <h3 class="text-center mb-4">Feltöltött termékek</h3>
+        <div id="adminProductList"></div>
     </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Termék szerkesztése</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form id="editProductForm">
+                <input type="hidden" id="editId">
+                <div class="mb-3">
+                    <label>Név</label>
+                    <input type="text" class="form-control" id="editNev" required>
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label>Eredeti Ár</label>
+                        <input type="number" class="form-control" id="editAr" required>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label>Akciós Ár</label>
+                        <input type="number" class="form-control" id="editAkciosAr" placeholder="Ha nincs, hagyd üresen">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label>Leírás</label>
+                    <textarea class="form-control" id="editLeiras" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label>Kép cseréje (Csak ha újat akarsz)</label>
+                    <input type="file" class="form-control" id="editKepFile">
+                </div>
+                <button type="submit" class="btn btn-success w-100">Módosítások mentése</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/admin.js"></script>
-  </body>
+</body>
 </html>

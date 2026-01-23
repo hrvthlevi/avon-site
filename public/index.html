@@ -1,35 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Beauty by Angéla</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="logo"><span>Beauty</span> by Angéla</div>
-        <nav>
-            <a href="index.html" style="font-weight:bold;">Főoldal</a>
-            <a href="products.html">Termékek</a>
-            <a href="cart.html">Kosár</a>
-        </nav>
+      <div class="logo">
+        <a href="index.html"><span>Beauty</span> by Angéla</a>
+      </div>
+      <nav>
+        <a href="index.html" style="font-weight: bold;">Főoldal</a>
+        <a href="products.html">Termékek</a>
+        <a href="cart.html">Kosár <span id="cart-count" class="cart-badge">0</span></a>
+      </nav>
     </header>
 
     <section class="hero">
-        <h1>Szépség, ami rólad szól</h1>
-        <p>Minőségi kozmetikumok – online rendelés</p>
-        <a href="products.html" class="hero-btn">Termékek megtekintése</a>
+      <h1>Szépség, ami rólad szól</h1>
+      <p>Minőségi kozmetikumok – online rendelés</p>
+      <a href="products.html" class="hero-btn">Termékek megtekintése</a>
     </section>
 
     <section>
-        <h2 style="text-align:center; margin-top:40px;">Kínálatunk</h2>
-        <div id="termek-kontener" class="products-grid"></div>
+      <h2 style="text-align: center; margin-bottom: 40px">Kiemelt termékek</h2>
+      <div class="products-grid" id="kiemelt-termekek"></div>
     </section>
 
     <footer class="footer">
-        &copy Noszály Angéla – Avon tanácsadó
+      &copy Noszály Angéla – Avon tanácsadó
+      <h5>
+        weboldalon található vélemények, állítások, termékmegjelenítések
+        kizárólag Noszály Angéla - Avon Tanácsadó által lértehozott tartalmak,
+        amelyeket az AVON nem ellenőríz, illetve nem hagy jóvá. A weboldal
+        üzemeltetéséért kizárólag az AVON Tanácsadó felel és az nem tekinthető
+        az AVON hivatalos weboldalának
+      </h5>
     </footer>
-</body>
+
+    <div id="productModal" class="product-modal" style="display: none;">
+        <div class="product-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body-grid">
+                <div class="modal-img-container">
+                    <img id="modalImg" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalName"></h2>
+                    <div id="modalPrice" class="modal-price-box"></div>
+                    <hr>
+                    <h3>Leírás / Összetevők:</h3>
+                    <p id="modalDesc"></p>
+                    <div class="modal-actions">
+                        <div id="modalBtnContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartConfirmModal" class="product-modal" style="display: none;">
+        <div class="product-modal-content" style="text-align:center; max-width: 500px; padding: 40px;">
+            <div style="font-size: 50px; margin-bottom: 20px;">🛍️</div>
+            <h3 style="color: #333; margin-bottom: 15px;">A termék bekerült a kosárba!</h3>
+            <p style="color: #666; margin-bottom: 30px;">Szeretnéd folytatni a vásárlást, vagy megnézed a kosarad?</p>
+            <div style="display:flex; justify-content:center; gap:15px;">
+                <button onclick="closeCartModal()" 
+                        style="background:#eee; color:#333; border:none; padding:12px 25px; border-radius:25px; cursor:pointer; font-weight:bold;">
+                    Vásárlás folytatása
+                </button>
+                <button onclick="window.location.href='cart.html'" 
+                        style="background:#d63384; color:white; border:none; padding:12px 25px; border-radius:25px; cursor:pointer; font-weight:bold;">
+                    Irány a kosár
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
 

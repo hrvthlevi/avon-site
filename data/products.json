@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "id": 1769101420046,
+    "nev": "teszt rúzs",
+    "ar": "1000",
+    "leiras": "Leírás",
+    "kepUrl": "/uploads/1769101420042-fekete-ruzs-halloweenra-farsangra.jpg"
+  },
+  {
+    "id": 1769102867156,
+    "nev": "ruzsika",
+    "ar": "1000",
+    "leiras": "leiraska",
+    "kepUrl": "/uploads/1769102867150-rÃºzs_unq_3429e1c3862a45a6b81e3779f730ccfd.jpg"
+  },
+  {
+    "id": 1769103050097,
+    "nev": "ruzs idk man",
+    "ar": "1000",
+    "leiras": "leiraka meg mindig",
+    "kepUrl": "/uploads/1769103050070-rossetti3.jpg"
+  },
+  {
+    "id": 1769103958493,
+    "nev": "uj ruzs",
+    "ar": 1000,
+    "leiras": "adsadasda",
+    "kepUrl": "/uploads/1769103958491-rÃºzs-Ã¶sszes.jpg",
+    "akciosAr": 400
+  },
+  {
+    "id": 1769105914496,
+    "nev": "aaaa",
+    "ar": 1000,
+    "leiras": "asd",
+    "kepUrl": "/uploads/1769105914493-fekete-ruzs-halloweenra-farsangra.jpg",
+    "akciosAr": null
+  },
+  {
+    "id": 1769109237741,
+    "nev": "dsdasdsadsa",
+    "ar": 12312321,
+    "akciosAr": null,
+    "leiras": "adasdsa",
+    "kepUrl": "/uploads/1769109237736-munkaim_drotvaz.png"
+  }
+]
